@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: helloweb
+  labels:
+    app: app
+spec:
+  defaultBackend:
+    service:
+      name: helloweb-backend
+      port:
+        number: 8080
